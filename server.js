@@ -11,7 +11,7 @@ const corsOptions = {
     origin: 'http://127.0.0.1:5500', 
     optionsSuccessStatus: 200
 };
-app.use(cors(corsOptions));
+app.use(cors({ origin: '*' }));
 
 // Tạo 1 đường dẫn API để Frontend gọi vào lấy Key
 app.get('/api/get-map-key', (req, res) => {
